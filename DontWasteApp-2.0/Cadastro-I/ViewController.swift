@@ -10,19 +10,27 @@ import FirebaseAuth
 
 class ViewController: UIViewController {
 
-    private let label: UILabel = {
+    //MARK: Sign In Fields
+    
+       private let label: UILabel = {
             let label = UILabel()
             label.textAlignment = .center
             label.text = "Log In"
             label.font = .systemFont(ofSize: 24, weight: .semibold)
             return label
         }()
+    
+    
         
         private let emailField: UITextField = {
             let emailField = UITextField()
             emailField.placeholder = "Email Address"
             emailField.layer.borderWidth = 1
+            emailField.autocapitalizationType = .none
             emailField.layer.borderColor = UIColor.black.cgColor
+            emailField.backgroundColor = .white
+            emailField.leftViewMode = .always
+            emailField.leftView = UIView(frame: CGRect (x: 0, y: 0, width: 5, height: 0))
             return emailField
         }()
         
@@ -32,6 +40,9 @@ class ViewController: UIViewController {
             passField.layer.borderWidth = 1
             passField.isSecureTextEntry = true
             passField.layer.borderColor = UIColor.black.cgColor
+            passField.backgroundColor = .white
+            passField.leftViewMode = .always
+            passField.leftView = UIView(frame: CGRect (x: 0, y: 0, width: 5, height: 0))
             return passField
         }()
         
@@ -42,23 +53,73 @@ class ViewController: UIViewController {
             button.setTitle("Continue", for: .normal)
             return button
         }()
-        
-        
+    
+        private let signOutButton: UIButton = {
+            let button = UIButton()
+            button.backgroundColor = .systemGreen
+            button.setTitleColor(.white, for: .normal)
+            button.setTitle("Log Out", for: .normal)
+            return button
+        }()
+    
+        //MARK: ViewDidLoad
         
         override func viewDidLoad() {
+            
+            let imageView = UIImageView (frame: CGRect(x: 100, y: 370, width: 65, height: 70))
+            
+            imageView.image = UIImage (named: "cadastrousuario")
+            imageView.contentMode = .center
+            imageView.clipsToBounds = true
+            
+            self.view.addSubview(imageView)
+
+            //-------------------------------------------------------//
+            
             super.viewDidLoad()
             view.addSubview(label)
             view.addSubview(emailField)
             view.addSubview(passwordField)
             view.addSubview(button)
-            
+            view.backgroundColor = .systemBackground
             button.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
+            
+            if FirebaseAuth.Auth.auth().currentUser != nil {
+                label.isHidden = true
+                button.isHidden = true
+                emailField.isHidden = true
+                passwordField.isHidden = true
+                
+                view.addSubview(signOutButton)
+                signOutButton.frame = CGRect(x: 20, y: 150, width: view.frame.size.width-40, height: 52)
+                
+                signOutButton.addTarget(self, action: #selector(logOutTapped), for: .touchUpInside)
+            }
         }
-        
+    
+    @objc private func logOutTapped() {
+        do {
+            try FirebaseAuth.Auth.auth().signOut()
+            
+            label.isHidden = false
+            button.isHidden = false
+            emailField.isHidden = false
+            passwordField.isHidden = false
+            
+            signOutButton.removeFromSuperview()
+            
+        }
+        catch {
+        print("An error ocurred")
+        }
+    }
+    
+    //MARK: Layout Constraints
+
         override func viewDidLayoutSubviews() {
             super.viewDidLayoutSubviews()
             
-            label.frame = CGRect(x: 0, y: 100, width: view.frame.size.width, height: 80)
+            label.frame = CGRect(x: 0, y: 350, width: view.frame.size.width, height: 80)
             
             emailField.frame = CGRect(x: 20,
                                       y: label.frame.origin.y+label.frame.size.height+10,
@@ -76,10 +137,14 @@ class ViewController: UIViewController {
                                   height: 52)
             
         }
+    
+    //MARK: Verification Fields
         
         override func viewDidAppear(_ animated: Bool) {
             super.viewDidAppear(animated)
-            emailField.becomeFirstResponder()
+            if FirebaseAuth.Auth.auth().currentUser == nil {
+                emailField.becomeFirstResponder()
+            }
         }
         
         @objc private func didTapButton(){
@@ -89,6 +154,7 @@ class ViewController: UIViewController {
                 print("Missing field data")
                 return
             }
+            
             // Get Auth Instances
             // attempt sign in
             // if failure, present alert to create account
@@ -114,10 +180,15 @@ class ViewController: UIViewController {
                 strongSelf.emailField.isHidden = true
                 strongSelf.passwordField.isHidden = true
                 strongSelf.button.isHidden = true
+                
+                strongSelf.emailField.resignFirstResponder()
+                strongSelf.passwordField.resignFirstResponder()
             })
             
         }
         
+    //MARK: Create Account Function Authentication
+    
         func showCreateAccount(email: String, password: String) {
             let alert = UIAlertController (title: "Create Account",
                                            message: "Would you like to create an account",
@@ -145,6 +216,9 @@ class ViewController: UIViewController {
                                                 strongSelf.emailField.isHidden = true
                                                 strongSelf.passwordField.isHidden = true
                                                 strongSelf.button.isHidden = true
+                                                
+                                                strongSelf.emailField.resignFirstResponder()
+                                                strongSelf.passwordField.resignFirstResponder()
                                                 
                                             })
                                             

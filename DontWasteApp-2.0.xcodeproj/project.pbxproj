@@ -80,6 +80,8 @@
 				CEF2034726CC078F00171AF9 /* Main.storyboard */,
 				CEF2034A26CC079200171AF9 /* Assets.xcassets */,
 				CEF2034C26CC079200171AF9 /* LaunchScreen.storyboard */,
+				CEF2034F26CC079200171AF9 /* Info.plist */,
+				CEF2035526CC095700171AF9 /* GoogleService-Info.plist */,
 				CEF2035826CC0B7900171AF9 /* info */,
 			);
 			path = "DontWasteApp-2.0";
@@ -96,8 +98,6 @@
 		CEF2035826CC0B7900171AF9 /* info */ = {
 			isa = PBXGroup;
 			children = (
-				CEF2034F26CC079200171AF9 /* Info.plist */,
-				CEF2035526CC095700171AF9 /* GoogleService-Info.plist */,
 			);
 			path = info;
 			sourceTree = "<group>";
