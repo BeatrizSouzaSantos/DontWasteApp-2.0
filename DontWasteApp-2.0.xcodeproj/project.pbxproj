@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,14 @@
 		CEF2034926CC078F00171AF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF2034726CC078F00171AF9 /* Main.storyboard */; };
 		CEF2034B26CC079200171AF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEF2034A26CC079200171AF9 /* Assets.xcassets */; };
 		CEF2034E26CC079200171AF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF2034C26CC079200171AF9 /* LaunchScreen.storyboard */; };
+		CEF2035626CC095700171AF9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEF2035526CC095700171AF9 /* GoogleService-Info.plist */; };
+		F49EB8AE2ED48339AB0919D8 /* Pods_DontWasteApp_2_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E690B9CDCEAD81EC269CE5B /* Pods_DontWasteApp_2_0.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E690B9CDCEAD81EC269CE5B /* Pods_DontWasteApp_2_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DontWasteApp_2_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97E6B5401111C559F8C947CD /* Pods-DontWasteApp-2.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DontWasteApp-2.0.release.xcconfig"; path = "Target Support Files/Pods-DontWasteApp-2.0/Pods-DontWasteApp-2.0.release.xcconfig"; sourceTree = "<group>"; };
+		BCD3E99C4D9469C1B5A8E937 /* Pods-DontWasteApp-2.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DontWasteApp-2.0.debug.xcconfig"; path = "Target Support Files/Pods-DontWasteApp-2.0/Pods-DontWasteApp-2.0.debug.xcconfig"; sourceTree = "<group>"; };
 		CEF2033E26CC078F00171AF9 /* DontWasteApp-2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DontWasteApp-2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF2034126CC078F00171AF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEF2034326CC078F00171AF9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 		CEF2034A26CC079200171AF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEF2034D26CC079200171AF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEF2034F26CC079200171AF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEF2035526CC095700171AF9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F49EB8AE2ED48339AB0919D8 /* Pods_DontWasteApp_2_0.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A740F17295110B2BB113F77A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E690B9CDCEAD81EC269CE5B /* Pods_DontWasteApp_2_0.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CEF2033526CC078F00171AF9 = {
 			isa = PBXGroup;
 			children = (
 				CEF2034026CC078F00171AF9 /* DontWasteApp-2.0 */,
 				CEF2033F26CC078F00171AF9 /* Products */,
+				F0EE67D0A4CA87EB9A68D0E4 /* Pods */,
+				A740F17295110B2BB113F77A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +73,49 @@
 		CEF2034026CC078F00171AF9 /* DontWasteApp-2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				CEF2035926CC0BA000171AF9 /* HomeScreen */,
+				CEF2035726CC0B5B00171AF9 /* Cadastro-I */,
 				CEF2034126CC078F00171AF9 /* AppDelegate.swift */,
 				CEF2034326CC078F00171AF9 /* SceneDelegate.swift */,
-				CEF2034526CC078F00171AF9 /* ViewController.swift */,
 				CEF2034726CC078F00171AF9 /* Main.storyboard */,
 				CEF2034A26CC079200171AF9 /* Assets.xcassets */,
 				CEF2034C26CC079200171AF9 /* LaunchScreen.storyboard */,
-				CEF2034F26CC079200171AF9 /* Info.plist */,
+				CEF2035826CC0B7900171AF9 /* info */,
 			);
 			path = "DontWasteApp-2.0";
+			sourceTree = "<group>";
+		};
+		CEF2035726CC0B5B00171AF9 /* Cadastro-I */ = {
+			isa = PBXGroup;
+			children = (
+				CEF2034526CC078F00171AF9 /* ViewController.swift */,
+			);
+			path = "Cadastro-I";
+			sourceTree = "<group>";
+		};
+		CEF2035826CC0B7900171AF9 /* info */ = {
+			isa = PBXGroup;
+			children = (
+				CEF2034F26CC079200171AF9 /* Info.plist */,
+				CEF2035526CC095700171AF9 /* GoogleService-Info.plist */,
+			);
+			path = info;
+			sourceTree = "<group>";
+		};
+		CEF2035926CC0BA000171AF9 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		F0EE67D0A4CA87EB9A68D0E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BCD3E99C4D9469C1B5A8E937 /* Pods-DontWasteApp-2.0.debug.xcconfig */,
+				97E6B5401111C559F8C947CD /* Pods-DontWasteApp-2.0.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +125,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEF2035226CC079200171AF9 /* Build configuration list for PBXNativeTarget "DontWasteApp-2.0" */;
 			buildPhases = (
+				434887CB384D7C4512AC4C69 /* [CP] Check Pods Manifest.lock */,
 				CEF2033A26CC078F00171AF9 /* Sources */,
 				CEF2033B26CC078F00171AF9 /* Frameworks */,
 				CEF2033C26CC078F00171AF9 /* Resources */,
+				7C7A02E90ED015ABF32BEFF0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,12 +178,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEF2034E26CC079200171AF9 /* LaunchScreen.storyboard in Resources */,
+				CEF2035626CC095700171AF9 /* GoogleService-Info.plist in Resources */,
 				CEF2034B26CC079200171AF9 /* Assets.xcassets in Resources */,
 				CEF2034926CC078F00171AF9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		434887CB384D7C4512AC4C69 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DontWasteApp-2.0-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C7A02E90ED015ABF32BEFF0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DontWasteApp-2.0/Pods-DontWasteApp-2.0-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DontWasteApp-2.0/Pods-DontWasteApp-2.0-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DontWasteApp-2.0/Pods-DontWasteApp-2.0-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CEF2033A26CC078F00171AF9 /* Sources */ = {
@@ -283,6 +379,7 @@
 		};
 		CEF2035326CC079200171AF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCD3E99C4D9469C1B5A8E937 /* Pods-DontWasteApp-2.0.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +399,7 @@
 		};
 		CEF2035426CC079200171AF9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97E6B5401111C559F8C947CD /* Pods-DontWasteApp-2.0.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
