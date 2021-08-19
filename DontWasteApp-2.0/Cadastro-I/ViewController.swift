@@ -10,7 +10,17 @@ import FirebaseAuth
 
 class ViewController: UIViewController {
     
-    //MARK: Sign In Fields
+    //MARK: Fields - Private
+    
+    private let userView: UIImageView = {
+        
+        let userView = UIImageView (frame: CGRect(x: 170, y: 300, width: 65, height: 70))
+        userView.image = UIImage (named: "cadastrousuario")
+        userView.contentMode = .scaleAspectFit
+        userView.clipsToBounds = true
+        
+        return userView
+    }()
     
     private let emailField: UITextField = {
         let emailField = UITextField()
@@ -47,6 +57,21 @@ class ViewController: UIViewController {
         return button
     }()
     
+    private var homeButton: UIButton = {
+        
+        var homeButton = UIButton(frame: CGRect(x: 20, y: 50, width: 40, height: 38))
+        homeButton.setImage(#imageLiteral(resourceName: "cadastrohome"), for: UIControl.State.init())
+        homeButton.contentMode = .scaleAspectFit
+        homeButton.clipsToBounds = true
+        homeButton.addTarget(self, action: #selector(homeButtonTapped), for: .touchUpInside)
+        
+        homeButton.widthAnchor.constraint(equalToConstant: 40).isActive = true
+        homeButton.heightAnchor.constraint(equalToConstant: 38).isActive = true
+        
+        return homeButton
+        
+    }()
+    
     private var infoButton: UIButton = {
         
         var infoButton = UIButton(frame: CGRect(x: 20, y: 20, width: 30, height: 25))
@@ -78,32 +103,16 @@ class ViewController: UIViewController {
         return button
     }()
     
-    //MARK: ViewDidLoad - User/Home and Hint?/
+    //MARK: ViewDidLoad - Add Subviews
     
     override func viewDidLoad() {
-        
-        let imageView = UIImageView (frame: CGRect(x: 170, y: 300, width: 65, height: 70))
-        
-        imageView.image = UIImage (named: "cadastrousuario")
-        imageView.contentMode = .scaleAspectFit
-        imageView.clipsToBounds = true
-        
-        self.view.addSubview(imageView)
-        
-        let homeView = UIImageView (frame: CGRect(x: 20, y: 50, width: 40, height: 38))
-        
-        homeView.image = UIImage (named: "cadastrohome")
-        homeView.contentMode = .scaleAspectFit
-        homeView.clipsToBounds = true
-        
-        self.view.addSubview(homeView)
-        
-        //-------------------------------------------------------//
-        
         super.viewDidLoad()
+        
+        view.addSubview(userView)
         view.addSubview(emailField)
         view.addSubview(passwordField)
         view.addSubview(button)
+        view.addSubview(homeButton)
         view.addSubview(infoButton)
         view.addSubview(labelHint)
         view.backgroundColor = .systemBackground
@@ -119,6 +128,17 @@ class ViewController: UIViewController {
             
             signOutButton.addTarget(self, action: #selector(logOutTapped), for: .touchUpInside)
         }
+    }
+    
+    //MARK: Actions
+    
+    @objc private func homeButtonTapped(){
+        
+        let homeVC = HomeViewController()
+        
+        self.present(homeVC, animated: true, completion: nil)
+        
+        
     }
     
     @objc private func buttonHintTapped(){
@@ -164,6 +184,8 @@ class ViewController: UIViewController {
                                      height: 50)
         
     }
+    
+   
     
     //MARK: Verification Fields
     
@@ -235,16 +257,19 @@ class ViewController: UIViewController {
                                             
                                             guard error == nil else {
                                                 //show account creation
-                                                print("Criação da conta falhou")
+                                                print("Falha na criação da conta")
                                                 return
                                             }
                                             
                                             print("Você se cadastrou")
                                             
+                                            strongSelf.userView.isHidden = true
                                             strongSelf.emailField.isHidden = true
                                             strongSelf.passwordField.isHidden = true
                                             strongSelf.button.isHidden = true
-                                            
+                                            strongSelf.homeButton.isHidden = true
+                                            strongSelf.infoButton.isHidden = true
+                                            strongSelf.labelHint.isHidden = true
                                             strongSelf.emailField.resignFirstResponder()
                                             strongSelf.passwordField.resignFirstResponder()
                                             

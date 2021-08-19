@@ -7,10 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CEB1CFD626CD79D500002A97 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB1CFD526CD79D500002A97 /* HomeViewController.swift */; };
+		CEE6E37526CDA61D00A76E4E /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEE6E36A26CDA61D00A76E4E /* OpenSans-SemiBold.ttf */; };
+		CEE6E37626CDA61D00A76E4E /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEE6E36B26CDA61D00A76E4E /* OpenSans-Light.ttf */; };
+		CEE6E37726CDA61D00A76E4E /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEE6E36C26CDA61D00A76E4E /* OpenSans-Italic.ttf */; };
+		CEE6E37826CDA61D00A76E4E /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEE6E36D26CDA61D00A76E4E /* OpenSans-ExtraBold.ttf */; };
+		CEE6E37926CDA61D00A76E4E /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEE6E36E26CDA61D00A76E4E /* OpenSans-LightItalic.ttf */; };
+		CEE6E37A26CDA61D00A76E4E /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEE6E36F26CDA61D00A76E4E /* OpenSans-Bold.ttf */; };
+		CEE6E37B26CDA61D00A76E4E /* OpenSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEE6E37026CDA61D00A76E4E /* OpenSans-SemiBoldItalic.ttf */; };
+		CEE6E37C26CDA61D00A76E4E /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEE6E37126CDA61D00A76E4E /* OpenSans-ExtraBoldItalic.ttf */; };
+		CEE6E37D26CDA61D00A76E4E /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = CEE6E37226CDA61D00A76E4E /* LICENSE.txt */; };
+		CEE6E37E26CDA61D00A76E4E /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEE6E37326CDA61D00A76E4E /* OpenSans-Regular.ttf */; };
+		CEE6E37F26CDA61D00A76E4E /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEE6E37426CDA61D00A76E4E /* OpenSans-BoldItalic.ttf */; };
 		CEF2034226CC078F00171AF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF2034126CC078F00171AF9 /* AppDelegate.swift */; };
 		CEF2034426CC078F00171AF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF2034326CC078F00171AF9 /* SceneDelegate.swift */; };
 		CEF2034626CC078F00171AF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF2034526CC078F00171AF9 /* ViewController.swift */; };
-		CEF2034926CC078F00171AF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF2034726CC078F00171AF9 /* Main.storyboard */; };
 		CEF2034B26CC079200171AF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEF2034A26CC079200171AF9 /* Assets.xcassets */; };
 		CEF2034E26CC079200171AF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF2034C26CC079200171AF9 /* LaunchScreen.storyboard */; };
 		CEF2035626CC095700171AF9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEF2035526CC095700171AF9 /* GoogleService-Info.plist */; };
@@ -21,11 +32,22 @@
 		8E690B9CDCEAD81EC269CE5B /* Pods_DontWasteApp_2_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DontWasteApp_2_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97E6B5401111C559F8C947CD /* Pods-DontWasteApp-2.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DontWasteApp-2.0.release.xcconfig"; path = "Target Support Files/Pods-DontWasteApp-2.0/Pods-DontWasteApp-2.0.release.xcconfig"; sourceTree = "<group>"; };
 		BCD3E99C4D9469C1B5A8E937 /* Pods-DontWasteApp-2.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DontWasteApp-2.0.debug.xcconfig"; path = "Target Support Files/Pods-DontWasteApp-2.0/Pods-DontWasteApp-2.0.debug.xcconfig"; sourceTree = "<group>"; };
+		CEB1CFD526CD79D500002A97 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CEE6E36A26CDA61D00A76E4E /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		CEE6E36B26CDA61D00A76E4E /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		CEE6E36C26CDA61D00A76E4E /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		CEE6E36D26CDA61D00A76E4E /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		CEE6E36E26CDA61D00A76E4E /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		CEE6E36F26CDA61D00A76E4E /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		CEE6E37026CDA61D00A76E4E /* OpenSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		CEE6E37126CDA61D00A76E4E /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		CEE6E37226CDA61D00A76E4E /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		CEE6E37326CDA61D00A76E4E /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		CEE6E37426CDA61D00A76E4E /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		CEF2033E26CC078F00171AF9 /* DontWasteApp-2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DontWasteApp-2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF2034126CC078F00171AF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEF2034326CC078F00171AF9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CEF2034526CC078F00171AF9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CEF2034826CC078F00171AF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEF2034A26CC079200171AF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEF2034D26CC079200171AF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEF2034F26CC079200171AF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +72,24 @@
 				8E690B9CDCEAD81EC269CE5B /* Pods_DontWasteApp_2_0.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CEE6E36926CDA61D00A76E4E /* Open_Sans */ = {
+			isa = PBXGroup;
+			children = (
+				CEE6E36A26CDA61D00A76E4E /* OpenSans-SemiBold.ttf */,
+				CEE6E36B26CDA61D00A76E4E /* OpenSans-Light.ttf */,
+				CEE6E36C26CDA61D00A76E4E /* OpenSans-Italic.ttf */,
+				CEE6E36D26CDA61D00A76E4E /* OpenSans-ExtraBold.ttf */,
+				CEE6E36E26CDA61D00A76E4E /* OpenSans-LightItalic.ttf */,
+				CEE6E36F26CDA61D00A76E4E /* OpenSans-Bold.ttf */,
+				CEE6E37026CDA61D00A76E4E /* OpenSans-SemiBoldItalic.ttf */,
+				CEE6E37126CDA61D00A76E4E /* OpenSans-ExtraBoldItalic.ttf */,
+				CEE6E37226CDA61D00A76E4E /* LICENSE.txt */,
+				CEE6E37326CDA61D00A76E4E /* OpenSans-Regular.ttf */,
+				CEE6E37426CDA61D00A76E4E /* OpenSans-BoldItalic.ttf */,
+			);
+			path = Open_Sans;
 			sourceTree = "<group>";
 		};
 		CEF2033526CC078F00171AF9 = {
@@ -77,11 +117,11 @@
 				CEF2035726CC0B5B00171AF9 /* Cadastro-I */,
 				CEF2034126CC078F00171AF9 /* AppDelegate.swift */,
 				CEF2034326CC078F00171AF9 /* SceneDelegate.swift */,
-				CEF2034726CC078F00171AF9 /* Main.storyboard */,
 				CEF2034A26CC079200171AF9 /* Assets.xcassets */,
 				CEF2034C26CC079200171AF9 /* LaunchScreen.storyboard */,
 				CEF2034F26CC079200171AF9 /* Info.plist */,
 				CEF2035526CC095700171AF9 /* GoogleService-Info.plist */,
+				CEE6E36926CDA61D00A76E4E /* Open_Sans */,
 				CEF2035826CC0B7900171AF9 /* info */,
 			);
 			path = "DontWasteApp-2.0";
@@ -105,6 +145,7 @@
 		CEF2035926CC0BA000171AF9 /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
+				CEB1CFD526CD79D500002A97 /* HomeViewController.swift */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -177,10 +218,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEE6E37D26CDA61D00A76E4E /* LICENSE.txt in Resources */,
+				CEE6E37526CDA61D00A76E4E /* OpenSans-SemiBold.ttf in Resources */,
 				CEF2034E26CC079200171AF9 /* LaunchScreen.storyboard in Resources */,
+				CEE6E37826CDA61D00A76E4E /* OpenSans-ExtraBold.ttf in Resources */,
 				CEF2035626CC095700171AF9 /* GoogleService-Info.plist in Resources */,
+				CEE6E37B26CDA61D00A76E4E /* OpenSans-SemiBoldItalic.ttf in Resources */,
+				CEE6E37726CDA61D00A76E4E /* OpenSans-Italic.ttf in Resources */,
+				CEE6E37A26CDA61D00A76E4E /* OpenSans-Bold.ttf in Resources */,
+				CEE6E37626CDA61D00A76E4E /* OpenSans-Light.ttf in Resources */,
+				CEE6E37926CDA61D00A76E4E /* OpenSans-LightItalic.ttf in Resources */,
+				CEE6E37F26CDA61D00A76E4E /* OpenSans-BoldItalic.ttf in Resources */,
+				CEE6E37C26CDA61D00A76E4E /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				CEE6E37E26CDA61D00A76E4E /* OpenSans-Regular.ttf in Resources */,
 				CEF2034B26CC079200171AF9 /* Assets.xcassets in Resources */,
-				CEF2034926CC078F00171AF9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEB1CFD626CD79D500002A97 /* HomeViewController.swift in Sources */,
 				CEF2034626CC078F00171AF9 /* ViewController.swift in Sources */,
 				CEF2034226CC078F00171AF9 /* AppDelegate.swift in Sources */,
 				CEF2034426CC078F00171AF9 /* SceneDelegate.swift in Sources */,
@@ -242,14 +294,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CEF2034726CC078F00171AF9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CEF2034826CC078F00171AF9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CEF2034C26CC079200171AF9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
